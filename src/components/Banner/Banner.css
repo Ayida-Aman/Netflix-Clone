@@ -1,0 +1,114 @@
+.banner {
+  height: 80vh; /* Full viewport height */
+  margin-top: 0; /* Remove negative top margin */
+  margin-bottom: 0; /* Remove negative bottom margin */
+  color: white;
+  object-fit: contain;
+  z-index: 1;
+  position: relative; /* Contain the fade */
+}
+
+.banner-contents {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: flex-start; /* Align items to the left */
+  padding: 10% 2%; /* Responsive padding */
+  text-align: left; /* Align text to the left */
+}
+
+.banner-title {
+  font-size: 3rem; /* Title font size */ /* Responsive font size */
+  font-weight: 800;
+  padding-bottom: 0.5rem; /* Space below the title */
+}
+
+.banner-description {
+  width: 80%; /* Use percentage for responsiveness */
+  max-width: 600px; /* Limit max width */
+  line-height: 1.5; /* Adjust for better readability */
+  padding: 1rem 0; /* Padding for the description */
+  font-size: 1rem; /* Responsive font size */
+}
+
+.banner-button {
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-size: 1.2rem; /* Responsive font size */
+  font-weight: 700;
+  border-radius: 0.2vh;
+  padding: 1rem 2rem; /* Padding for buttons */
+  margin: 0.5rem; /* Space around buttons */
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+.play {
+  color: #000;
+  background-color: #fff;
+}
+
+.banner-button:hover {
+  color: #000;
+  background-color: #c6c6c6;
+  transition: all 0.2s;
+}
+
+.banner-fadebottom {
+  position: absolute; /* Position the fade effect absolutely */
+  bottom: 0; /* Align to the bottom */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  height: 40vh; /* Maintain height for the fade */
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.91)
+  );
+}
+
+.footer-outer-container {
+  padding-top: 20px; /* Add space above the footer */
+  background-color: #111;
+  color: gray;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .banner-contents {
+    align-items: center; /* Center align for smaller screens */
+    text-align: center; /* Center text for smaller screens */
+  }
+
+  .banner-title {
+    font-size: 5vw; /* Adjust font size for smaller screens */
+  }
+
+  .banner-description {
+    font-size: 3vw; /* Adjust font size for smaller screens */
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .banner-button {
+    font-size: 3vw; /* Adjust font size for buttons */
+    padding: 0.8rem 1.5rem; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-title {
+    font-size: 6vw; /* Further adjust font size for very small screens */
+  }
+
+  .banner-description {
+    font-size: 4vw; /* Further adjust font size */
+  }
+
+  .banner-button {
+    font-size: 4vw; /* Further adjust font size for buttons */
+  }
+}
